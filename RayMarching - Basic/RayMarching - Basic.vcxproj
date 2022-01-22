@@ -142,17 +142,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="LightSource.h" />
     <ClInclude Include="PrototypeObject.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="Scene.h" />
     <ClInclude Include="Sphere.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="RayMarching - Basic.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="LightSource.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="PrototypeObject.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Sphere.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ToDo.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

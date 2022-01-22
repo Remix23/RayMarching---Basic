@@ -4,6 +4,18 @@
 
 #include "PrototypeObject.h"
 
+PrototypeObject::PrototypeObject()
+{
+	Pos = sf::Vector3f(0.0f, 0.0f, 0.0f);
+	Color = sf::Vector3f(0.0f, 0.0f, 0.0f);
+}
+
+PrototypeObject::PrototypeObject(sf::Vector3f pos)
+{
+	Pos = pos;
+	Color = sf::Vector3f(0.0f, 0.0f, 0.0f);
+}
+
 PrototypeObject::PrototypeObject(sf::Vector3f p, sf::Vector3f c)
 {
 	Pos = p;
@@ -25,12 +37,7 @@ sf::Vector3f PrototypeObject::GetColor()
 	return Color;
 }
 
-float PrototypeObject::GetDistance(PrototypeObject obj1, PrototypeObject obj2)
+float PrototypeObject::objSDF(sf::Vector3f point)
 {
-	return std::sqrt(std::pow(obj1.Pos.x - obj2.Pos.x, 2) + std::pow(obj1.Pos.y - obj2.Pos.y, 2) + std::pow(obj1.Pos.z - obj2.Pos.z, 2));
-}
-
-float PrototypeObject::GetDistanceSquared(PrototypeObject obj1, PrototypeObject obj2)
-{
-	return std::pow(obj1.Pos.x - obj2.Pos.x, 2) + std::pow(obj1.Pos.y - obj2.Pos.y, 2) + std::pow(obj1.Pos.z - obj2.Pos.z, 2);
+	return GetDistanceSquared(Pos, point);
 }

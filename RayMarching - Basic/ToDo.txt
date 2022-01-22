@@ -1,0 +1,8 @@
+potrzebne klasy:
+- kamera
+- scena (trzyma info o obiektach, o kamerze i ogarnia sdf)
+- ray (jakieœ tam basic)
+- obiekty:
+	- kula
+	- prostopad³oœcian 
+	- coœ tam siê wymyœli

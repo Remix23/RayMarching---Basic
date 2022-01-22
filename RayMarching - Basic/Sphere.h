@@ -5,11 +5,11 @@
 
 class Sphere : public PrototypeObject
 {
-public:
-	
-	unsigned long Radius;
-
-
 private:
+	unsigned long _radius;
+public:
 
+	Sphere(sf::Vector3f pos, sf::Vector3f col, unsigned long r);
+
+	float objSDF(sf::Vector3f point) override;
 };
