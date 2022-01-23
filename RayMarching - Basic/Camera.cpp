@@ -4,10 +4,11 @@
 
 Camera::Camera() : PrototypeObject()
 {
-	angleOfViev = 45;
+	FOV = 45;
 }
 
-Camera::Camera(sf::Vector3f pos, float aov) : PrototypeObject(pos)
+Camera::Camera(sf::Vector3f pos, float fov) : PrototypeObject(pos)
 {
-	angleOfViev = aov;
+	FOV = fov
+;
 }

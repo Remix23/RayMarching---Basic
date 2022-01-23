@@ -8,10 +8,10 @@ class Camera : public PrototypeObject
 {
 public:
 
-	float angleOfViev;
+	float FOV;
 
 	Camera();
 
-	Camera(sf::Vector3f pos, float aov);
+	Camera(sf::Vector3f pos, float fov);
 
 };

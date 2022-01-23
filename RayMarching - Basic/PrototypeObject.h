@@ -13,7 +13,7 @@ public:
 
 	PrototypeObject(sf::Vector3f p, sf::Vector3f c);
 
-	~PrototypeObject();
+	virtual ~PrototypeObject();
 
 	sf::Vector3f GetPos();
 	sf::Vector3f GetColor();
@@ -27,5 +27,12 @@ public:
 		return std::pow(obj1Pos.x - obj2Pos.x, 2) + std::pow(obj1Pos.y - obj2Pos.y, 2) + std::pow(obj1Pos.z - obj2Pos.z, 2);
 	}
 
-	virtual float objSDF(sf::Vector3f point);
+	static sf::Vector3f NormaliseVector(sf::Vector3f vec)
+	{
+		float vecLenght = std::sqrt(vec.x * vec.x + vec.y * vec.y + vec.z * vec.z);
+
+		return vec / vecLenght;
+	}
+
+	virtual float GetSDF(sf::Vector3f point);
 };

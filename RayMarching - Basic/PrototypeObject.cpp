@@ -37,7 +37,7 @@ sf::Vector3f PrototypeObject::GetColor()
 	return Color;
 }
 
-float PrototypeObject::objSDF(sf::Vector3f point)
+float PrototypeObject::GetSDF(sf::Vector3f point)
 {
 	return GetDistanceSquared(Pos, point);
 }

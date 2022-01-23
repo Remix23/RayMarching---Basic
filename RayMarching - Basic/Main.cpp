@@ -1,13 +1,17 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
-#include "PrototypeObject.h"
+#include "Sphere.h"
+#include "Scene.h"
+#include "Camera.h"
 
 int main()
 {
     sf::RenderWindow window(sf::VideoMode(1000, 800), "SFML works!");
     sf::CircleShape shape(100.f);
 
-    PrototypeObject obj(sf::Vector3f(0, 0, 0), sf::Vector3f(255, 255, 255));
+    Scene scene;
+
+
 
     shape.setFillColor(sf::Color::Green);
 
